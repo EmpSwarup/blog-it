@@ -12,26 +12,25 @@ const Footer = () => {
           <h1 className={styles.logoText}>blogify</h1>
         </div>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernatur obcaecati veritatis. Aperiam cum
-          porro sequi, totam minima consequuntur, aspernatur deleniti vero
-          repellendus dorales.
+          Blogify is a platform for people to share their stories and creative
+          ideas. Connect with thousands of other users and share your stories
+          with them. Create an account today and share your posts.
         </p>
       </div>
       <div className={styles.links}>
         <div className={styles.list}>
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Homepage</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/about">About</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Style</Link>
-          <Link href="/">Fashion</Link>
-          <Link href="/">Coding</Link>
-          <Link href="/">Travel</Link>
+          <Link href="/blog?cat=style">Style</Link>
+          <Link href="/blog?cat=culture">Culture</Link>
+          <Link href="/blog?cat=fashion">Fashion</Link>
+          <Link href="/blog?cat=coding">Coding</Link>
+          <Link href="/blog?cat=travel">Travel</Link>
+          <Link href="/blog?cat=coding">Coding</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>

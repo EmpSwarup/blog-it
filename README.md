@@ -1,18 +1,15 @@
 This project is not complete yet.
 
+## Tech Used
+
+- NextJS
+- MongoDB
+- Prism
+- Firebase
+
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Then install necesscary packages and libraries
+First, install necessary packages and libraries:
 
 ```bash
 npm install
@@ -20,6 +17,16 @@ npm install
 yarn install
 # or
 pnpm install
+```
+
+Then run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
