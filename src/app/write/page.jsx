@@ -13,7 +13,6 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import ReactQuill from "react-quill";
 
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
