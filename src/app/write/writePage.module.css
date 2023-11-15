@@ -9,6 +9,23 @@
   padding: 10px 20px;
   margin-left: 50px;
   width: max-content;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.select:hover {
+  border-color: #2980b9;
+}
+
+.select:focus {
+  border-color: #2980b9;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
 }
 
 .editor {
