@@ -27,9 +27,11 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+  const [uploadProgress, setUploadProgress] = useState(0);
 
   useEffect(() => {
     const storage = getStorage(app);
+
     const upload = () => {
       const name = new Date().getTime() + file.name;
       const storageRef = ref(storage, name);
@@ -41,20 +43,13 @@ const WritePage = () => {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          console.log("Upload is " + progress + "% done");
-          switch (snapshot.state) {
-            case "paused":
-              console.log("Upload is paused");
-              break;
-            case "running":
-              console.log("Upload is running");
-              break;
-          }
+          setUploadProgress(progress); // Update the upload progress
         },
         (error) => {},
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setMedia(downloadURL);
+            setUploadProgress(100); // Set progress to 100% when done
           });
         }
       );
@@ -116,6 +111,23 @@ const WritePage = () => {
         <option value="travel">Travel</option>
         <option value="coding">Coding</option>
       </select>
+
+      {file && (
+        <div className={styles.uploadIndicator}>
+          <div className={styles.progressBarContainer}>
+            <div
+              className={styles.progressBar}
+              style={{ width: `${uploadProgress}%` }}
+            ></div>
+          </div>
+          {uploadProgress !== 100 ? (
+            <div>Uploading Image... {Math.round(uploadProgress)}%</div>
+          ) : (
+            <div className={styles.uploadComplete}>Upload complete!</div>
+          )}
+        </div>
+      )}
+
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
           <Image src="/plus.png" alt="" width={16} height={16} />
