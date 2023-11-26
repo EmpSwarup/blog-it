@@ -40,7 +40,9 @@ const AuthLinks = () => {
           ) : (
             <>
               <Link href="/write">Write</Link>
-              <span className={styles.link}>Logout</span>
+              <span style={{ cursor: "pointer" }} onClick={signOut}>
+                Logout
+              </span>
             </>
           )}
         </div>
