@@ -1,15 +1,45 @@
-This project is not complete yet.
+Blogify is a platform for people to share their stories and creative ideas. Connect with thousands of other users and share your stories with them.
 
 ## Tech Used
 
 - NextJS
 - MongoDB
-- Prism
+- Prisma
 - Firebase
+
+## Features
+
+- User authentication
+- Post and view blogs
+- Comment
+- Dark mode and more
+
+## Screenshots
+
+Homepage
+![App Screenshot](https://github.com/EmpSwarup/blogify/blob/main/public/homepage1.png?raw=true)
+
+Homepage darkmode
+![App Screenshot](https://github.com/EmpSwarup/blogify/blob/main/public/homepagedark.png?raw=true)
+
+Categories and Recent Posts section
+![App Screenshot](https://github.com/EmpSwarup/blogify/blob/main/public/homepage2.png?raw=true)
+
+Sign In page
+![App Screenshot](https://github.com/EmpSwarup/blogify/blob/main/public/signin.png?raw=true)
+
+Write section
+![App Screenshot](https://github.com/EmpSwarup/blogify/blob/main/public/writesection.png?raw=true)
+
+Post view
+![App Screenshot](https://github.com/EmpSwarup/blogify/blob/main/public/post.png?raw=true)
+
+Comment section
+![App Screenshot](https://github.com/EmpSwarup/blogify/blob/main/public/comment.png?raw=true)
 
 ## Getting Started
 
-First, install necessary packages and libraries:
+Fetch the code and install necessary packages and libraries:
 
 ```bash
 npm install
